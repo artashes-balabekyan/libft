@@ -33,7 +33,11 @@ int main(void)
 	printf("ft_memset 1234567890: %s\n", ss);
 
 	unsigned char memcpysrc[10] = "123456";
-	unsigned char memcpydst[10] = "ssssssss";
+	unsigned char memcpydst[10] = "dsssssds";
 	ft_memcpy(memcpydst, memcpysrc, 6);
-	printf("dst: %s\n", memcpydst);
+	printf("ft_memcpy: %s\n", memcpydst);
+
+	unsigned char memmv[10] = "1234567890";
+	ft_memmove(&memmv[3], &memmv[4], 6);
+	printf("ft_memmove: %s\n", memmv);
 }
