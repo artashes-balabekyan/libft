@@ -22,7 +22,7 @@ int main(void)
 	printf("is_alnum '-' - %d\n", ft_isalnum('-'));
 	printf("is_ascii 128 - %d\n", ft_isascii(128));
 	printf("ft_isprint 128 - %d\n", ft_isprint(32));
-	printf("ft_strlen 128 - %zu\n", ft_strlen(""));
+	printf("ft_strlen 128 - %zu\n", ft_strlen("128"));
 
 	unsigned char src[15] = "1234567890";
 	ft_memset(src, '1', 10);
@@ -40,4 +40,28 @@ int main(void)
 	unsigned char memmv[10] = "1234567890";
 	ft_memmove(&memmv[3], &memmv[4], 6);
 	printf("ft_memmove: %s\n", memmv);
+
+	char strlcpysrc[10] = "12345678";
+	char strlcpydst[10] = "23ssssssss";
+	int strlcpy_length = (int)strlcpy(strlcpydst, strlcpysrc, 10);
+	printf("strlcpy: %s\n", strlcpydst);
+	printf("strlcpy_length: %d\n", strlcpy_length);
+
+	char ft_strlcpysrc[10] = "12345678";
+	char ft_strlcpydst[10] = "23ssssssss";
+	int ft_strlcpy_length = (int)ft_strlcpy(ft_strlcpydst, ft_strlcpysrc, 10);
+	printf("ft_strlcpy: %s\n", ft_strlcpydst);
+	printf("ft_strlcpy_length: %d\n", ft_strlcpy_length);
+
+	char strlcatsrc[10] = "12345678";
+	char strlcatdst[10] = "23sssssssd";
+	int strlcat_length = (int)strlcat(strlcatdst, strlcatsrc, 8);
+	printf("strlcat: %s\n", strlcatdst);
+	printf("strlcat_length: %d\n", strlcat_length);
+
+	char ft_strlcatsrc[10] = "12345678";
+	char ft_strlcatdst[10] = "23sssssssd";
+	int ft_strlcat_length = (int)ft_strlcat(ft_strlcatdst, ft_strlcatsrc, 8);
+	printf("ft_strlcat: %s\n", ft_strlcatdst);
+	printf("ft_strlcat_length: %d\n", ft_strlcat_length);
 }
