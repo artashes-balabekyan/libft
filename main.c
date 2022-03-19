@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
 #include "./libft.h"
 
 int main(void)
@@ -24,9 +25,13 @@ int main(void)
 	printf("ft_isprint 128 - %d\n", ft_isprint(127));
 	printf("ft_strlen 128 - %zu\n", ft_strlen("128"));
 
-	unsigned char src[15] = "1234567890";
-	ft_memset(src, '1', 10);
+	char src[15] = "1234567890";
+	ft_memset(src, 'c', 5);
 	printf("ft_memset: 1234567890 1 %s\n", src);
+
+	char memsetsrc[15] = "1234567890";
+	memset(memsetsrc, 'c', 5);
+	printf("memset: 1234567890 1 %s\n", memsetsrc);
 
 	unsigned char ss[15] = "1234567890";
 	ft_bzero(ss, 10);
@@ -49,7 +54,7 @@ int main(void)
 
 	char ft_strlcpysrc[10] = "12345678";
 	char ft_strlcpydst[10] = "23ssssssss";
-	int ft_strlcpy_length = (int)ft_strlcpy(ft_strlcpydst, ft_strlcpysrc, 6);
+	int ft_strlcpy_length = (int)ft_strlcpy(ft_strlcpydst, ft_strlcpysrc, 0);
 	printf("ft_strlcpy: %s\n", ft_strlcpydst);
 	printf("ft_strlcpy_length: %d\n", ft_strlcpy_length);
 
@@ -67,4 +72,24 @@ int main(void)
 	int ft_strlcat_length = (int)ft_strlcat(ft_strlcatdst, ft_strlcatsrc, 6);
 	printf("ft_strlcat: %s\n", ft_strlcatdst);
 	printf("ft_strlcat_length: %d\n", ft_strlcat_length);
+
+	printf("toupper - %d\n", toupper(107));
+	printf("ft_toupper - %d\n", ft_toupper(107));
+
+	printf("tolower - %d\n", tolower(85));
+	printf("ft_tolower - %d\n", ft_tolower(85));
+
+	printf("strchr - %s\n", strchr("asdfba", 'a'));
+	printf("ft_strchr - %s\n", ft_strchr("asdfba", 'a'));
+
+	printf("strrchr - %s\n", strrchr("bonjourno" + 2, 0));
+	printf("ft_strrchr - %s\n", ft_strrchr("bonjourno" + 2, 0));
+
+	// char strncmpsrc[10] = "3";
+	// char strncmpdst[30] = "3";
+	printf("strncmp - %d\n", strncmp("test\200", "test\0", 6));
+
+	// char ft_strncmpsrc[10] = "3";
+	// char ft_strncmpdst[30] = "3";
+	printf("ft_strncmp - %d\n", ft_strncmp("test\200", "test\0", 6));
 }
