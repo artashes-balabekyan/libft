@@ -22,5 +22,5 @@ void *ft_memset(void *destination, int c, size_t n)
         dst[i] = c;
         i++;
     }
-    return (0);
+    return (destination);
 }
