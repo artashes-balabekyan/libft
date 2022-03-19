@@ -1,13 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abalabek <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/20 01:19:41 by abalabek          #+#    #+#             */
+/*   Updated: 2022/03/20 01:19:43 by abalabek         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "./libft.h"
 
 t_size_t	ft_strlcpy(char *dst, const char *src, t_size_t dstsize)
 {
-	char *d = dst;
-	char *s = (char *)src;
-	t_size_t size = ft_strlen(s);
+	char		*d;
+	char		*s;
+	t_size_t	size;
+
+	d = dst;
+	s = (char *)src;
+	size = ft_strlen(s);
 	if (dstsize == 0)
 		return (size);
-	while(dstsize > 1 && *src)
+	while (dstsize > 1 && *src)
 	{
 		*d++ = *src++;
 		dstsize--;
