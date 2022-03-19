@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xcloud <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: abalabek <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/12 17:23:43 by xcloud            #+#    #+#             */
-/*   Updated: 2022/03/12 17:24:00 by xcloud           ###   ########.fr       */
+/*   Created: 2022/03/20 01:17:57 by abalabek          #+#    #+#             */
+/*   Updated: 2022/03/20 01:17:59 by abalabek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 #include <stdio.h>
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    if (*s == c)
-            return ((char *)s);
-    while (*s++){
-        if (*s == c)
-            return ((char *)s);
-    }
-    return (NULL);
+	if (*s == c)
+		return ((char *)s);
+	while (*s++)
+	{
+		if (*s == c)
+			return ((char *)s);
+	}
+	return (NULL);
 }
