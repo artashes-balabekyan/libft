@@ -1,19 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abalabek <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/20 01:02:29 by abalabek          #+#    #+#             */
+/*   Updated: 2022/03/20 01:02:30 by abalabek         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "./libft.h"
 
-void *ft_memmove(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-    char *destination = dst;
-    const char *source = src;
-    if (destination < source)
-        while (n--)
-            *destination++ = *source++;
-    else
-    {
-        char *ls = (char *)source + (n - 1);
-        char *ld = destination + (n - 1);
-        while (n--)
-            *ld-- = *ls--;
-    }
-    return dst;
+	char	*destination;
+	char	*source;
+	char	*ls;
+	char	*ld;
+
+	destination = dst;
+	source = (char *)src;
+	ls = (char *)source + (n - 1);
+	ld = destination + (n - 1);
+	if (destination < source)
+		while (n--)
+			*destination++ = *source++;
+	else
+	{
+		while (n--)
+			*ld-- = *ls--;
+	}
+	return (dst);
 }
