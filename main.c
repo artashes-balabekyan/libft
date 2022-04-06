@@ -95,4 +95,7 @@ int main(void)
 
 	printf("memchr - %s\n", memchr("aonjourno", 97, 10));
 	printf("ft_memchr - %s\n", ft_memchr("aonjourno", 97, 10));
+
+	printf("memcmp - %d\n", memcmp("", "test\0", 10));
+	printf("ft_memcmp - %d\n", ft_memcmp("", "test\0", 10));
 }

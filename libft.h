@@ -33,6 +33,7 @@ t_size_t	ft_strlcpy(char *dst, const char *src, t_size_t dstsize);
 t_size_t	ft_strlcat(char *dst, const char *src, t_size_t dstsize);
 t_size_t	ft_strlen(const char *s);
 void		*ft_memchr(const void *s, int c, t_size_t n);
+int			ft_memcmp(const void *s1, const void *s2, t_size_t n);
 
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
