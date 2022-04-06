@@ -92,4 +92,7 @@ int main(void)
 	// char ft_strncmpsrc[10] = "3";
 	// char ft_strncmpdst[30] = "3";
 	printf("ft_strncmp - %d\n", ft_strncmp("test\200", "test\0", 6));
+
+	printf("memchr - %s\n", memchr("aonjourno", 97, 10));
+	printf("ft_memchr - %s\n", ft_memchr("aonjourno", 97, 10));
 }
