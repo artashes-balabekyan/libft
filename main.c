@@ -98,4 +98,7 @@ int main(void)
 
 	printf("memcmp - %d\n", memcmp("", "test\0", 10));
 	printf("ft_memcmp - %d\n", ft_memcmp("", "test\0", 10));
+
+	printf("strnstr - %s\n", strnstr("lorem ipsum dolor sit amet", "", 15));
+	printf("ft_strnstr - %s\n", ft_strnstr("lorem ipsum dolor sit amet", "", 15));
 }
