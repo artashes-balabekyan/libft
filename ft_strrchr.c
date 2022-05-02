@@ -17,16 +17,17 @@ char	*ft_strrchr(const char *s, int c)
 {
 	const char	*found;
 	const char	*p;
+	char cc = c;
 
 	if (c == '\0')
 		return (ft_strchr (s, '\0'));
 	found = NULL;
-	p = ft_strchr (s, c);
+	p = ft_strchr (s, cc);
 	while (p != NULL)
 	{
 		found = p;
 		s = p + 1;
-		p = ft_strchr (s, c);
+		p = ft_strchr (s, cc);
 	}
 	return ((char *) found);
 }
