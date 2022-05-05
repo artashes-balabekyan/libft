@@ -101,4 +101,25 @@ int main(void)
 
 	printf("strnstr - %s\n", strnstr("lorem ipsum dolor sit amet", "", 15));
 	printf("ft_strnstr - %s\n", ft_strnstr("lorem ipsum dolor sit amet", "", 15));
+
+	// printf("atoi - %d\n", atoi("\t\n\r\v\f  469 \n"));
+	// printf("ft_atoi - %d\n", ft_atoi("\t\n\r\v\f  469 \n"));
+
+	char	*str;
+	str = (char *)ft_calloc(30, sizeof(char));
+	if (!str){
+		printf("\nNULL");
+	}
+	else{
+		printf("AA %s\n", str);
+	}
+	free(str);
+
+
+	printf("%s\n", ft_strchr("tripouille", 't' + 256));
+
+	char s[] = "tripouille";
+	printf("t - %s\n", ft_strchr(s, 't' + 256));
+
+	printf("strncmp - %d\n", ft_strncmp("1234", "1235", -1));
 }

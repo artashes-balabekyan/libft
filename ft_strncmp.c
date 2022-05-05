@@ -13,9 +13,9 @@
 #include "./libft.h"
 #include <stdio.h>
 
-int	ft_strncmp(const char *s1, const char *s2, t_size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	t_size_t	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
