@@ -18,8 +18,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	unsigned char	*hay;
 	unsigned char	*ned;
 	unsigned char	*needle_pos;
-	size_t		needle_len;
-	size_t		found_len;
+	size_t			needle_len;
+	size_t			found_len;
 
 	needle_len = ft_strlen(needle);
 	hay = (unsigned char *)haystack;

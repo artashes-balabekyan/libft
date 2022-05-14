@@ -17,8 +17,9 @@ char	*ft_strrchr(const char *s, int c)
 {
 	const char	*found;
 	const char	*p;
-	char cc = c;
+	char		cc;
 
+	cc = c;
 	if (c == '\0')
 		return (ft_strchr (s, '\0'));
 	found = NULL;
