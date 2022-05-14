@@ -36,5 +36,7 @@ int			ft_atoi(const char*str);
 void		*ft_calloc(size_t count, size_t size);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
+char		*ft_strcpy(char *dest, const char *src);
+char		*ft_strdup(const char *s1);
 
 #endif
